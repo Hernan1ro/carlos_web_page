@@ -10,7 +10,7 @@ export const Layout = ({ children, page, hide }) => {
         <title>Customer Solutions | {page}</title>
         <meta
           name="description"
-          content="Somos una empresa centrada en el cliente que utilizamos metodologías estándares y agiles. Nuestra filosofía es brindarte grandes experiencias generando relaciones a largo plazo."
+          content="Docente y Coach desde hace más de 10 años, además de consultor y capacitador. Escritor y en el proceso para el poder de servir: De dar para recibir."
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>

@@ -40,10 +40,10 @@
   }
 }
 
-.header img {
+/* .header img {
   width: 15rem;
   height: 5.88rem;
-}
+} */
 .header nav {
   display: flex;
   gap: 2rem;

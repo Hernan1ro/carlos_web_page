@@ -7,7 +7,7 @@ export const Layout = ({ children, page, hide }) => {
   return (
     <>
       <Head>
-        <title>Customer Solutions | {page}</title>
+        <title>{page}</title>
         <meta
           name="description"
           content="Docente y Coach desde hace más de 10 años, además de consultor y capacitador. Escritor y en el proceso para el poder de servir: De dar para recibir."

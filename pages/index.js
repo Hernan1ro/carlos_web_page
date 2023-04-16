@@ -8,7 +8,7 @@ import { WhatsappBtn } from "../Components/WhatBtn";
 
 export default function Home() {
   return (
-    <Layout page="Inicio">
+    <Layout page="Carlos Fuentes">
       <Hero />
       <Facts />
       <Section1 />

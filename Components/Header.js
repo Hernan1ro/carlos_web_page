@@ -17,21 +17,23 @@ export const Header = ({ hide }) => {
   const localFlag = {
     "en-US": {
       url: "/assets/icons/en.jpg",
-      solutions: "Solutions",
-      services: "Services",
+      home: "Home",
+      book: "Book",
       contact: "Contact",
-      test: "Mature test",
+      courses: "Courses",
+      videos: "Videos",
     },
     "es-ES": {
       url: "/assets/icons/es.jpg",
-      solutions: "Soluciones",
-      services: "Servicios",
+      home: "Inicio",
+      book: "Libro",
       contact: "Contacto",
-      test: "Evaluación de madurez",
+      courses: "Cursos",
+      videos: "Videos",
     },
   };
 
-  const { url, solutions, services, contact, test } = localFlag[locale];
+  const { url, home, book, contact, videos, courses } = localFlag[locale];
 
   const handleOpenLan = () => {
     setOpenLang(!openLan);
@@ -43,24 +45,27 @@ export const Header = ({ hide }) => {
         <div>
           <Link href="/">
             <a>
-              <img src="/assets/brandlogo/logo.webp" alt="" />
+              <img src="/assets/brandlogo/logo.png" alt="" />
             </a>
           </Link>
           <div className={styles.nav_container}>
             {!hide ? (
               <>
                 <nav>
-                  <Link href="/#soluciones">
-                    <a>{solutions}</a>
+                  <Link href="#home">
+                    <a>{home}</a>
                   </Link>
-                  <Link href="/servicios">
-                    <a>{services}</a>
+                  <Link href="#libro">
+                    <a>{book}</a>
                   </Link>
-                  <Link href="/contacto">
+                  <Link href="#contacto">
                     <a>{contact}</a>
                   </Link>
-                  <Link href="/evaluacion360">
-                    <button>{test}</button>
+                  <Link href="#videos">
+                    <a>{videos}</a>
+                  </Link>
+                  <Link href="#cursos">
+                    <a>{courses}</a>
                   </Link>
                 </nav>
                 <Image

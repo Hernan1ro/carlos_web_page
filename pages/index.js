@@ -1,5 +1,6 @@
 import { Layout } from "../Layout/Layout";
 import { Hero } from "../containers/Hero";
+import { HeroServices } from "../containers/HeroServices";
 import { Facts } from "../containers/Facts";
 import { Section1 } from "../containers/section1";
 import { Solutions } from "../containers/Solutions";
@@ -9,7 +10,8 @@ import { WhatsappBtn } from "../Components/WhatBtn";
 export default function Home() {
   return (
     <Layout page="Carlos Fuentes">
-      <Hero />
+      {/* <Hero /> */}
+      <HeroServices />
       <Facts />
       <Section1 />
       <Solutions />

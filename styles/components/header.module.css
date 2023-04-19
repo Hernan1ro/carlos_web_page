@@ -130,6 +130,7 @@
   cursor: pointer;
   width: 7rem;
   left: calc(50% - 3.9rem);
+  z-index: 1;
 }
 
 .flex {

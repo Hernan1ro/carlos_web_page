@@ -1,15 +1,25 @@
 .servicios {
-  background-image: url(../../public/assets/imagenes/background.webp);
+  background-image: url(../../public/carlos_banner.png);
   background-repeat: no-repeat;
-  height: 80vh;
+  min-height: 70rem;
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
   animation: show 1s ease;
+  padding: 2rem;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .servicios {
+    background-image: none;
+    max-height: 62rem;
+    height: 100vh;
+  }
 }
 
 @keyframes show {
@@ -21,12 +31,19 @@
   }
 }
 
+.hero_text {
+  display: grid;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 128rem;
+}
+
 .servicios h1 {
   font-size: var(--larger);
-  color: var(--white);
+  color: var(--black);
   font-weight: bold;
-  text-align: center;
-  width: 40%;
+  text-align: left;
+  width: 50%;
 }
 
 @media (max-width: 768px) {
@@ -36,16 +53,39 @@
   }
 }
 
+.btn_container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
 .servicios button {
-  background-color: transparent;
-  border: 2px solid var(--white);
-  border-radius: 1.5rem;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 1rem;
   color: var(--white);
-  font-size: var(--lg);
+  font-size: var(--xl);
+  font-weight: bold;
   padding: 1rem 2rem;
   cursor: pointer;
+  width: fit-content;
 }
 
 .servicios button:hover {
   transform: scale(1.05);
+}
+
+.carlos_name {
+  width: 35.5rem;
+  height: 9.4rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .carlos_name {
+    width: 25rem;
+    height: auto;
+  }
 }

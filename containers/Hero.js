@@ -51,7 +51,7 @@ export const Hero = () => {
             <button>{button}</button>
           </Link>
         </div>
-        <img src="./assets/illustrations/hero-img.svg" alt="hero landing" />
+        <img src="./assets/" alt="hero landing" />
       </div>
     </section>
   );

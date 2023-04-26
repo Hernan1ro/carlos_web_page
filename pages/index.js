@@ -6,14 +6,14 @@ import { Section1 } from "../containers/section1";
 import { Solutions } from "../containers/Solutions";
 import { Section2 } from "../containers/Section2";
 import { WhatsappBtn } from "../Components/WhatBtn";
+import { Services } from "../containers/Services";
 
 export default function Home() {
   return (
     <Layout page="Carlos Fuentes">
       <HeroServices />
       <About />
-      <Section1 />
-      <Solutions />
+      <Services />
       <Section2 />
       <WhatsappBtn />
     </Layout>

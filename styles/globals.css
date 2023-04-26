@@ -1,7 +1,7 @@
 /* ----------------Global settings-----------------*/
 :root {
   /* -----------------Fonts--------------------  */
-  --main-font: Helvetica;
+  --main-font: Montserrat, helvetica, arial;
   /* ------------------Colors------------------- */
   --primary: #f49b4c;
   --primary-hover: #f7a965;
@@ -14,6 +14,7 @@
   --black: #201e1c;
   --gray-dark: #525252;
   --white: rgb(255, 255, 255);
+  --bg-white: #eeeff0;
   --off-white: #faf8f7;
   --gray: #bababa;
   --light-gray: #e7f5ff;

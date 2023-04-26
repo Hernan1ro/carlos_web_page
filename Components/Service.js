@@ -25,13 +25,13 @@ export const Service = ({ name, img, p, btn }) => {
     <figure className={styles.solution} ref={element}>
       {view && (
         <>
-          <img src={`/assets/imagenes/${img}.jpg`} alt={name} />
+          <img src={`/${img}.png`} alt={name} />
           <div>
             <h4>{name}</h4>
             <p>{p}</p>
-            <Link href="/contacto">
+            <a href="#contacto">
               <button>{btn}</button>
-            </Link>
+            </a>
           </div>
         </>
       )}

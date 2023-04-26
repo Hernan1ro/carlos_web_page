@@ -7,34 +7,37 @@ export const Services = () => {
 
   const solutionsText = {
     "en-US": {
-      h2: "Lines of business",
-      btn: "Contact us",
+      h2: "My courses",
+      btn: "Get more",
+      p: "",
       solutions: [
         {
           name: "Project Management",
-          image: "gestion-proyecto",
+          image: "curso_1",
           p: "We are a team prepared to support you in your needs in the management of your projects.",
         },
         {
           name: "Service and customer experience",
-          image: "expcliente2",
+          image: "curso_2",
           p: "We provide a qualitative and quantitative methodology to enhance your service experience model",
         },
       ],
     },
     "es-ES": {
-      h2: "Líneas de negocio",
-      btn: "Contáctanos",
+      h2: "Mis cursos",
+      btn: "Obtener más información",
       solutions: [
         {
-          name: "Gestión de proyectos",
-          image: "gestion-proyecto",
-          p: "Somos un equipo de trabajo preparados para apoyarte en tus necesidades en la gestión de tus proyectos.",
+          name: "Escuela Sabana de retazos",
+          image: "curso_1",
+          p: "Busca ayudar a potencializar tu desarrollo como persona y la construcción de tu branding personal",
+          p2: " Aprenderás a construir una imagen sólida y coherente de ti mismo, tanto en línea como en la vida real. Con un enfoque basado en resultados y en la aplicación práctica, te mostraremos cómo presentarte de manera impactante y efectiva, y cómo desarrollar una presencia poderosa que te diferencie de la multitud.",
         },
         {
-          name: "Experiencia del servicio y el cliente",
-          image: "expcliente2",
-          p: "Brindamos una metodología cualitativa y cuantitativa para potencializar tu modelo de experiencia de servicio.",
+          name: "Escuela de servicio",
+          image: "curso_2",
+          p: "El servicio como la herramienta poderosa parta transformar realidades",
+          p2: "Aprenderás cómo puedes ayudar a los demás mientras mejoras tu propia vida, y cómo el servicio puede ser la herramienta más valiosa que tengas en tu arsenal. Con un enfoque basado en la empatía y la compasión, aprenderás cómo puedes hacer una diferencia real en la vida de los demás y en la tuya.",
         },
       ],
     },
@@ -46,11 +49,32 @@ export const Services = () => {
     <section className={styles.facts_section}>
       <div className={styles.facts_container}>
         <h2>{h2}</h2>
+        <p>
+          Ofrecemos soluciones de aprendizaje únicas que te ayudarán a alcanzar
+          tus metas personales y profesionales. Conozca a continuación los
+          cursos que tenemos disponibles para ti.
+        </p>
         <div className={styles.grid}>
           {solutions.map((solution) => {
             const { name, image, p } = solution;
             return <Service name={name} img={image} p={p} btn={btn} />;
           })}
+        </div>
+        <div className={styles.grid}>
+          <p className={styles.description}>
+            Aprenderás a construir una imagen sólida y coherente de ti mismo,
+            tanto en línea como en la vida real. Con un enfoque basado en
+            resultados y en la aplicación práctica, te mostraremos cómo
+            presentarte de manera impactante y efectiva, y cómo desarrollar una
+            presencia poderosa que te diferencie de la multitud.
+          </p>
+          <p className={styles.description}>
+            Aprenderás cómo puedes ayudar a los demás mientras mejoras tu propia
+            vida, y cómo el servicio puede ser la herramienta más valiosa que
+            tengas en tu arsenal. Con un enfoque basado en la empatía y la
+            compasión, aprenderás cómo puedes hacer una diferencia real en la
+            vida de los demás y en la tuya.
+          </p>
         </div>
       </div>
     </section>

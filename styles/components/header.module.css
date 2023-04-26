@@ -63,7 +63,7 @@
 .header nav a {
   font-size: var(--md);
   font-weight: bold;
-  color: var(--black);
+  color: var(--gray-dark);
   line-height: 2rem;
 }
 .header nav a:hover {

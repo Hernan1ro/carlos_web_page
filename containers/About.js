@@ -1,52 +1,72 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/containers/about.module.css";
-import { useRouter } from "next/router";
 
 export const About = () => {
-  const element = useRef(null);
-  const [view, setView] = useState(false);
-  const { locale } = useRouter();
-
-  const sectionText = {
-    "en-US": {
-      h2: "About us",
-      p: "We are a customer-centric company that uses standard and agile methodologies. Our philosophy is to provide you with great experiences generating long-term relationships.",
-    },
-    "es-ES": {
-      h2: "Nosotros",
-      p: "Somos una empresa centrada en el cliente que utilizamos metodologías estándares y agiles. Nuestra filosofía es brindarte grandes experiencias generando relaciones a largo plazo.",
-    },
-  };
-
-  const { h2, p } = sectionText[locale];
-
-  useEffect(() => {
-    //-------------- intersection observer --------------//
-    let options = {
-      rootMargin: "-60px",
-      threshold: 0,
-    };
-    const observer = new IntersectionObserver(function (entries) {
-      const { isIntersecting } = entries[0];
-      if (isIntersecting) {
-        setView(true);
-      }
-    }, options);
-    observer.observe(element.current);
-  }, []);
   return (
-    <section className={styles.section1} ref={element}>
+    <section id="about" className={styles.about}>
       <div className={styles.container}>
-        {view && (
-          <>
-            <img src="/assets/imagenes/nosotros.webp" alt={h2} />
-            <div>
-              <h2>{h2}</h2>
-              <p>{p}</p>
+        <div className={styles.about__container}>
+          <h3>Carlos Fuentes</h3>
+          <div className={styles.about__container_image}>
+            <div className={styles.about__photo_container}>
+              <img
+                className={styles.about__photo}
+                src="/carlos_about.png"
+                alt="Hernán Mercado"
+              />
+              <div className={styles.social_media__container}>
+                <a target="_blank" href="https://twitter.com/Hernan1ro">
+                  <img
+                    src="/icons/twitter.svg"
+                    name="twitter"
+                    className={styles.social_img}
+                  />
+                </a>
+                <a target="_blank" href="https://github.com/Hernan1ro">
+                  <img
+                    src="/icons/facebook.svg"
+                    name="facebook"
+                    className={styles.social_img}
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/hernan1ro/"
+                >
+                  <img
+                    src="/icons/instagram.svg"
+                    name="linkedin"
+                    className={styles.social_img}
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/hernan1ro/"
+                >
+                  <img
+                    src="/icons/linkedin.svg"
+                    name="linkedin"
+                    className={styles.social_img}
+                  />
+                </a>
+              </div>
             </div>
-          </>
-        )}
+          </div>
+          <div className={styles.about__people}>
+            <h3>+15.000</h3>
+            <p>Personas impactadas</p>
+          </div>
+          <div className={styles.description_container}>
+            <p className={styles.about__description}>
+              Soy docente y Coach desde hace más de 10 años, además de consultor
+              y capacitador. Elegí el camino de ser escritor y en el proceso he
+              descubierto el poder de servir: De dar para recibir.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
+
+export default About;

@@ -7,6 +7,7 @@ import { Solutions } from "../containers/Solutions";
 import { Section2 } from "../containers/Section2";
 import { WhatsappBtn } from "../Components/WhatBtn";
 import { Services } from "../containers/Services";
+import { Values } from "../containers/Values";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroServices />
       <About />
       <Services />
+      <Values />
       <Section2 />
       <WhatsappBtn />
     </Layout>

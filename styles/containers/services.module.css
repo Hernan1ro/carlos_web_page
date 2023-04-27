@@ -9,7 +9,7 @@
 }
 .facts_container h2 {
   color: var(--primary);
-  font-size: var(--larger);
+  font-size: var(--large);
   font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;

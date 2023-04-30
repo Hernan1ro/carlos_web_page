@@ -7,6 +7,7 @@ import { Services } from "../containers/Services";
 import { Values } from "../containers/Values";
 import { Book } from "../containers/Book";
 import { Quotes } from "../containers/Quotes";
+import { Testimonials } from "../containers/Testimonials";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Values />
       <Book />
       <Quotes />
+      <Testimonials />
       <WhatsappBtn />
     </Layout>
   );

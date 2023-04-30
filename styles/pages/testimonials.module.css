@@ -1,0 +1,235 @@
+.testimoniales {
+  margin: 0 auto;
+  max-width: 128rem;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  animation: toRigt;
+  animation-fill-mode: initial;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier();
+  margin-top: 5rem;
+}
+
+@keyframes toRigt {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.testimoniales h2 {
+  color: var(--primary);
+  font-size: var(--xsl);
+  font-weight: bold;
+}
+.testimoniales h3 {
+  color: var(--secondary);
+  font-size: var(--xs);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .testimoniales h2 {
+    font-size: var(--xl);
+    margin-top: 2rem;
+  }
+  .testimoniales h3 {
+    font-size: var(--lg);
+  }
+}
+
+.testimoniales_container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .testimoniales_container {
+    margin: 2rem 0;
+  }
+}
+.testimonial {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 1px 1px 7px var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  max-width: 35rem;
+  height: 25rem;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+}
+
+.testimonial .testimonial_img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+
+.testimonial img:nth-of-type(1) {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 4rem;
+}
+.testimonial img:nth-of-type(3) {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 4rem;
+  opacity: 0.5;
+}
+
+.testimonial h4 {
+  font-size: var(--md);
+  color: var(--primary);
+  font-weight: bold;
+}
+.testimonial p {
+  font-size: var(--md);
+  color: var(--secondary);
+  font-weight: normal;
+}
+
+@media (max-width: 500px) {
+  .testimonial h4 {
+    font-size: var(--md);
+  }
+  .testimonial p {
+    font-size: var(--sm);
+  }
+}
+
+.video_container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 4rem 0;
+  gap: 2rem;
+}
+
+@media (max-width: 767px) {
+  .video_container {
+    margin: 2rem 0;
+  }
+}
+
+.video {
+  border-radius: 1.5rem;
+  box-shadow: 1px 1px 7px var(--primary);
+  max-width: 38rem;
+  height: 45rem;
+}
+.video iframe {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.video .video_description {
+  margin-top: 1rem;
+}
+.video div h4 {
+  font-size: var(--xxl);
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.video div p {
+  font-size: var(--lg);
+  color: var(--gray-dark);
+  font-weight: normal;
+}
+.casos_container {
+  display: grid;
+  gap: 2rem;
+  place-items: center;
+  font-size: var(--md);
+  color: var(--primary-1);
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.casos_container h3 {
+  font-size: var(--xs);
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.profile div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.casos_container div span:nth-of-type(1) {
+  font-size: var(--md);
+  color: var(--primary);
+  font-weight: bold;
+}
+.casos_container div span:nth-of-type(2) {
+  font-size: var(--md);
+  color: var(--secondary);
+  font-weight: normal;
+}
+
+.casos_container img {
+  width: 20rem;
+  filter: drop-shadow(1px 1px 2px var(--primary));
+}
+
+.testimonial_text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+}
+
+.preguntas_frecuentes {
+  max-width: 100rem;
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .preguntas_frecuentes {
+    text-align: center;
+  }
+  .preguntas_frecuentes h3 {
+    font-size: var(--sm);
+  }
+}
+.preguntas_frecuentes div {
+  border-bottom: 1px solid var(--secondary);
+  padding: 1rem;
+}
+
+.preguntas_frecuentes h3 {
+  font-size: var(--lg);
+  color: var(--secondary);
+  font-weight: bold;
+}
+.preguntas_frecuentes p {
+  font-size: var(--lg);
+  color: var(--primary-1);
+  font-weight: normal;
+}
+
+@media (max-width: 767px) {
+  .preguntas_frecuentes p {
+    font-size: var(--sm);
+  }
+  .preguntas_frecuentes h3 {
+    font-size: var(--md);
+  }
+}

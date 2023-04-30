@@ -123,7 +123,7 @@ export const Quotes = () => {
             />
             <h5>{quotes[index].author}</h5>
             <p className={styles.description}>{quotes[index].text}</p>
-            <div>
+            <div className={styles.dots}>
               {quotes.map((_, i) => (
                 <div
                   onClick={handleNext}
@@ -131,8 +131,8 @@ export const Quotes = () => {
                   key={i}
                   style={{
                     backgroundColor: i === index ? "#f49b4c" : "#D9D9D9",
-                    height: 18,
-                    width: 18,
+                    height: 15,
+                    width: 15,
                     borderRadius: "50%",
                     margin: 5,
                     display: "inline-block",

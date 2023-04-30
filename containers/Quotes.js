@@ -109,7 +109,6 @@ export const Quotes = () => {
   };
 
   const { solutions, h2, btn } = valueText[locale];
-  console.log(typeof index);
   return (
     <section className={styles.facts_section}>
       <div className={styles.facts_container}>

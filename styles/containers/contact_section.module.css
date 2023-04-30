@@ -2,28 +2,20 @@
   display: grid;
   gap: 2rem;
   place-items: center;
-  margin-top: 6rem;
+  margin: 6rem 0;
 }
 
 .contact h2 {
-  font-size: var(--xxl);
+  font-size: var(--xsl);
   color: var(--primary);
   font-weight: bold;
-  font-family: var(--secondary-font);
-}
-.contact h2 {
-  font-size: var(--xxl);
-  color: var(--primary);
-  font-weight: bold;
-  font-family: var(--secondary-font);
   max-width: 76rem;
   text-align: center;
 }
 .contact > p {
   font-size: var(--sd);
-  color: var(--primary);
+  color: var(--gray-dark);
   font-weight: normal;
-  font-family: var(--secondary-font);
   max-width: 76rem;
   text-align: center;
 }
@@ -31,7 +23,7 @@
 .form {
   display: grid;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 3rem 0;
 }
 
 .input_container {
@@ -62,19 +54,19 @@
 }
 
 .input label {
-  font-size: var(--sm);
-  color: var(--primary);
+  font-size: var(--md);
+  color: var(--gray-dark);
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .input input {
   padding: 1rem;
-  border: 2px solid var(--line-gray);
+  border: 2px solid var(--gray);
   outline: none;
   font-size: var(--sd);
-  color: var(--bg_gray);
+  color: var(--gray-intense);
   border-radius: 1rem;
-  color: var(--line-gray);
-  background-color: var(--light_gray);
 }
 
 @media (max-width: 767px) {
@@ -89,19 +81,17 @@
 
 .form textarea {
   padding: 1rem;
-  border: 2px solid var(--line-gray);
+  border: 2px solid var(--gray);
   outline: none;
   font-size: var(--sd);
-  color: var(--bg_gray);
   border-radius: 1rem;
-  color: var(--line-gray);
+  color: var(--gray-intense);
   max-height: 10rem;
-  background-color: var(--light_gray);
   resize: none;
 }
 
 .form button {
-  background-image: var(--gradient_gray);
+  background-color: var(--primary);
   padding: 1rem;
   max-width: 34rem;
   text-transform: uppercase;
@@ -140,4 +130,41 @@
 
 .policies em {
   color: var(--secondary);
+}
+
+.error {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: var(--sm);
+  width: fit-content;
+  color: var(--red);
+  border: 1px solid var(--red);
+  animation: fadeIn 0.5s ease;
+}
+.success {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: var(--sm);
+  width: fit-content;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

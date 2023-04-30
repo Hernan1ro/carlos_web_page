@@ -33,38 +33,40 @@ export const ContactSection = () => {
     );
 
     if (value.includes("") || !testEmail) {
-      setError(true);
+      setSuccess("");
+      setError("Ha habido un error, intenta nuevamente");
       setTimeout(() => setError(false), 3000);
       console.log("No se ha podido enviar mensaje");
     } else {
-      console.log("Mensaje enviado");
       sendEmailFunction();
     }
 
-    return;
-    e.target.reset();
+    // return;
+    // e.target.reset();
     //------------- Send email ----------- //
     function sendEmailFunction() {
       setLoading(true);
       //console.log(loading);
       emailjs
         .sendForm(
-          "service_h613dui",
-          "template_0etlpoc",
+          "service_xwwrqej",
+          "template_3w5zgm9",
           form.current,
-          "2oJX9WiBCQtAmeD-b"
+          "5b5TcAMAZdpLU3I2W"
         )
         .then(
           (result) => {
+            setError("");
             setSuccess(
               "Tú mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con tigo"
             );
             setLoading(false);
+            console.log("Mensaje enviado");
           },
           (error) => {
-            console.log(error);
+            setSuccess("");
             setLoading(false);
-            setError(false);
+            setError("Ha habido un problema, intenta nuevamente");
             //console.log(error.text);
             setTimeout(() => setError(false), 10000);
           }
@@ -118,12 +120,23 @@ export const ContactSection = () => {
             src="/home/send_icon.svg"
           />
         </button>
-        <div data-aos="fade-up" className={styles.policies}>
+        {/* <div data-aos="fade-up" className={styles.policies}>
           <input type="checkbox" required />
           <span>
             He leído y acepto las <em>Políticas de privacidad</em>
           </span>
-        </div>
+        </div> */}
+        {error !== "" ? (
+          <span className={styles.error}>
+            Por favor, revisa los campos y vuelve a intentarlo
+          </span>
+        ) : null}
+        {success !== "" ? (
+          <span className={styles.success}>
+            Mensaje enviado correctamente, pronto nos pondremos en contacto con
+            usted.
+          </span>
+        ) : null}
       </form>
     </section>
   );

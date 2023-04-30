@@ -8,6 +8,7 @@ import { Values } from "../containers/Values";
 import { Book } from "../containers/Book";
 import { Quotes } from "../containers/Quotes";
 import { Testimonials } from "../containers/Testimonials";
+import { ContactSection } from "../containers/ContactSection";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Book />
       <Quotes />
       <Testimonials />
+      <ContactSection />
       {/* <WhatsappBtn /> */}
     </Layout>
   );

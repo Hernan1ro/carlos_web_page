@@ -149,7 +149,19 @@ export const Header = ({ hide }) => {
           </div>
         </div>
       </header>
-      {show ? <HamburgerMenu handleClick={handleClick} /> : null}
+      {show ? (
+        <HamburgerMenu
+          home={home}
+          book={book}
+          contact={contact}
+          videos={videos}
+          courses={courses}
+          about={about}
+          values={values}
+          reflections={reflections}
+          handleClick={handleClick}
+        />
+      ) : null}
     </>
   );
 };

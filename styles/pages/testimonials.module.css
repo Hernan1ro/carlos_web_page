@@ -92,13 +92,12 @@
 }
 
 .testimonial h4 {
-  font-size: var(--md);
-  color: var(--primary);
-  font-weight: bold;
+  font-size: var(--xl);
+  color: var(--gray-dark);
 }
 .testimonial p {
-  font-size: var(--md);
-  color: var(--secondary);
+  font-size: var(--sd);
+  color: var(--gray-dark);
   font-weight: normal;
 }
 

@@ -7,7 +7,7 @@ export const VideoTestimonial = ({ videoUrl, name, phrase }) => {
       <VideoPlayer url={videoUrl} />
       <div className={styles.video_description}>
         <h4>{name}</h4>
-        <p>"{phrase}"</p>
+        <p>{phrase}</p>
       </div>
     </div>
   );

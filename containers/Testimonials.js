@@ -6,20 +6,20 @@ import { VideoPlayer } from "../Components/VideoPlayer";
 export const Testimonials = () => {
   const testimonials = [
     {
-      name: "Diana Carolina Manzano Aponte",
-      img: "diana",
+      name: "Diana Carolina",
+      img: "carlos_about.png",
       testimonial:
         "Es una excelente empresa. Responsables con la información y tiempos a cumplir",
     },
     {
       name: "Cristina Izquierdo",
-      img: "cristina",
+      img: "carlos_photo.png",
       testimonial:
         "Empresa confiable, excelentes profesionales y buscan las mejores alternativas para el cliente",
     },
     {
       name: "Mary Luz",
-      img: "mary",
+      img: "carlos_values.png",
       testimonial:
         "todo los productos que ofrecen Pq son una empresa seria y responsable",
     },
@@ -29,19 +29,19 @@ export const Testimonials = () => {
       url: "https://www.youtube.com/watch?v=eCiMqit3hFA",
       name: "La Imaginación en tu vida HOY",
       testimonial:
-        "Es una excelente empresa. Responsables con la información y tiempos a cumplir",
+        "La importancia de la imaginación en el desarrollo personal y cómo utilizarla como herramienta poderosa para visualizarte y alcanzar tus metas",
     },
     {
       url: "https://www.youtube.com/watch?v=Sy9q8GNsZvc",
       name: "Las personas merecen respeto, las ideas deben ganárselo",
       testimonial:
-        "Es una excelente empresa. Responsables con la información y tiempos a cumplir",
+        "Confía en ti y vence el miedo a equivocarte para alcanzar tus metas",
     },
     {
       url: "https://www.youtube.com/watch?v=73CZQsQ6JA8&t=2s",
       name: "La experiencia del cliente una nueva batalla",
       testimonial:
-        "Es una excelente empresa. Responsables con la información y tiempos a cumplir",
+        "Mejora la experiencia del cliente en tu negocio: enfócate en el cliente, trabaja la confianza y cultiva la cultura organizacional",
     },
   ];
 

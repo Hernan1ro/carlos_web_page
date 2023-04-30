@@ -19,7 +19,7 @@ export default function Home() {
       <Book />
       <Quotes />
       <Testimonials />
-      <WhatsappBtn />
+      {/* <WhatsappBtn /> */}
     </Layout>
   );
 }

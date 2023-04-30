@@ -70,7 +70,7 @@
   transition-property: color;
   transition-duration: 0.3s;
   color: var(--primary);
-  border-bottom: 1px solid var(--primary);
+  /* border-bottom: 1px solid var(--primary); */
 }
 .header nav .link_active {
   color: var(--primary);

@@ -73,7 +73,7 @@
 
 @media (max-width: 767px) {
   .input {
-    width: 95%;
+    width: 100%;
   }
 
   .input input {

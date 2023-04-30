@@ -18,22 +18,38 @@ export const Header = ({ hide }) => {
     "en-US": {
       url: "/assets/icons/en.jpg",
       home: "Home",
-      book: "Book",
-      contact: "Contact",
+      about: "About",
       courses: "Courses",
+      values: "Values",
+      book: "Book",
+      reflections: "Reflections",
+      contact: "Contact",
       videos: "Videos",
     },
     "es-ES": {
       url: "/assets/icons/es.jpg",
       home: "Inicio",
-      book: "Libro",
-      contact: "Contacto",
+      about: "Perfil",
       courses: "Cursos",
+      values: "Valores",
+      book: "Libro",
+      reflections: "Reflexiones",
+      contact: "Contacto",
       videos: "Videos",
     },
   };
 
-  const { url, home, book, contact, videos, courses } = localFlag[locale];
+  const {
+    url,
+    home,
+    book,
+    contact,
+    videos,
+    courses,
+    about,
+    values,
+    reflections,
+  } = localFlag[locale];
 
   const handleOpenLan = () => {
     setOpenLang(!openLan);
@@ -52,20 +68,29 @@ export const Header = ({ hide }) => {
             {!hide ? (
               <>
                 <nav>
-                  <Link href="#home">
+                  <Link href="#inicio">
                     <a>{home}</a>
+                  </Link>
+                  <Link href="#about">
+                    <a>{about}</a>
+                  </Link>
+                  <Link href="#cursos">
+                    <a>{courses}</a>
+                  </Link>
+                  <Link href="#valores">
+                    <a>{values}</a>
                   </Link>
                   <Link href="#libro">
                     <a>{book}</a>
                   </Link>
-                  <Link href="#contacto">
-                    <a>{contact}</a>
+                  <Link href="#reflexiones">
+                    <a>{reflections}</a>
                   </Link>
                   <Link href="#videos">
                     <a>{videos}</a>
                   </Link>
-                  <Link href="#cursos">
-                    <a>{courses}</a>
+                  <Link href="#contacto">
+                    <a>{contact}</a>
                   </Link>
                 </nav>
                 <Image

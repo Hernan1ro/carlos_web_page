@@ -59,7 +59,7 @@
 }
 
 .box2 a:hover {
-  text-decoration: underline;
+  color: var(--primary);
 }
 
 @media (max-width: 768px) {

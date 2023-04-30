@@ -27,10 +27,10 @@ export const Footer = ({ report }) => {
         <div className={styles.box2}>
           <ul>
             <li>
-              <a href="#hero">Home</a>
+              <a href="#hero">Inicio</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about">Acerca</a>
             </li>
             <li>
               <a href="#cursos">Cursos</a>

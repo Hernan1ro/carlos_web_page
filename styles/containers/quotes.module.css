@@ -1,0 +1,95 @@
+.facts_section {
+  background-color: var(--off-white);
+  padding: 6rem 0;
+}
+.facts_container {
+  max-width: 128rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    place-items: center;
+  }
+}
+
+.grid .carlos_img {
+  width: 100%;
+  max-width: 35rem;
+}
+
+.grid h4 {
+  font-size: var(--large);
+  color: var(--primary);
+  text-align: center;
+  font-weight: bold;
+}
+
+.author {
+  margin-top: 2rem;
+}
+
+.text_container {
+  display: grid;
+  gap: 2rem;
+  place-items: center;
+}
+
+.text_container h5 {
+  font-size: var(--xs);
+  font-weight: bold;
+  color: var(--gray-dark);
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.description {
+  max-width: 50rem;
+  padding: 1rem;
+  text-align: left;
+  font-size: var(--xs);
+  border-radius: 1rem;
+  color: var(--gray-dark);
+}
+
+@media (max-width: 768px) {
+  .description {
+    font-size: var(--lg);
+  }
+}
+
+.dots {
+  display: flex;
+  gap: 1rem;
+}
+
+.dots div {
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #d9d9d9;
+}
+
+.dots .active {
+  background-color: var(--primary);
+}

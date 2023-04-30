@@ -46,7 +46,7 @@ export const Services = () => {
   const { solutions, h2, btn } = solutionsText[locale];
 
   return (
-    <section className={styles.facts_section}>
+    <section id="cursos" className={styles.facts_section}>
       <div className={styles.facts_container}>
         <h2>{h2}</h2>
         <p>

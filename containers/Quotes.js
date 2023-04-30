@@ -110,7 +110,7 @@ export const Quotes = () => {
 
   const { solutions, h2, btn } = valueText[locale];
   return (
-    <section className={styles.facts_section}>
+    <section id="reflexiones" className={styles.facts_section}>
       <div className={styles.facts_container}>
         <div className={styles.grid}>
           <div className={styles.text_container}>

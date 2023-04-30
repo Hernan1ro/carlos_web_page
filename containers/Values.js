@@ -45,7 +45,7 @@ export const Values = () => {
   const { solutions, h2, btn } = valueText[locale];
 
   return (
-    <section className={styles.facts_section}>
+    <section id="valores" className={styles.facts_section}>
       <div className={styles.facts_container}>
         <div className={styles.grid}>
           <img src="/carlos_values.png" alt="Carlos fuentes" />

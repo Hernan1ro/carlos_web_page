@@ -1,9 +1,8 @@
-import { useEffect, useState, useRef } from "react";
-import styles from "../styles/components/footer.module.css";
+import { useState } from "react";
+import styles from "../styles/containers/footer.module.css";
 import { useRouter } from "next/router";
 
 export const Footer = ({ report }) => {
-  const element = useRef(null);
   const [view, setView] = useState(false);
   const { locale } = useRouter();
 
@@ -18,44 +17,43 @@ export const Footer = ({ report }) => {
 
   const { text } = Text[locale];
 
-  useEffect(() => {
-    //-------------- intersection observer --------------//
-    let options = {
-      rootMargin: "-70px",
-      threshold: 0,
-    };
-    const observer = new IntersectionObserver(function (entries) {
-      const { isIntersecting } = entries[0];
-      if (isIntersecting) {
-        setView(true);
-      }
-    }, options);
-    observer.observe(element.current);
-  }, []);
-
   const classReport = {
     report: styles.report,
   };
+
   return (
-    <footer ref={element} className={`${styles.footer} ${classReport[report]}`}>
-      {view && (
-        <div className={styles.footer_container}>
-          <div className={styles.box1}>
-            <img src="/assets/icons/linkedin.svg" alt="linkedin-logo" />
-            <h6>CUSTOMER SOLUTIONS</h6>
-            <span>Calle 81 #71-29, Barranquilla, Atlántico, Colombia</span>
-            <span>+57 3008586803</span>
-            <span>Provincia Ontaro, Canada</span>
-            <span>+1 3658803809</span>
-          </div>
-          <div className={styles.box2}>
-            <p>
-              Copyright © 2022 CUSTOMERS SOLUTIONS <br /> {text}
-            </p>
-            <p>experienciacliente@customerssolutions.co</p>
-          </div>
+    <footer className={styles.footer}>
+      <div className={styles.footer_container}>
+        <div className={styles.box2}>
+          <ul>
+            <li>
+              <a href="#hero">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#cursos">Cursos</a>
+            </li>
+            <li>
+              <a href="#valores">Valores</a>
+            </li>
+            <li>
+              <a href="#libro">Mi libro</a>
+            </li>
+            <li>
+              <a href="#reflexiones">Reflexiones</a>
+            </li>
+            <li>
+              <a href="#videos">Videos</a>
+            </li>
+            <li>
+              <a href="#testimoniales">Testimoniales</a>
+            </li>
+          </ul>
+          <img src="/assets/brandlogo/logo.png" alt="Carlos Fuentes" />
         </div>
-      )}
+      </div>
     </footer>
   );
 };

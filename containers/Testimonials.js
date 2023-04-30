@@ -46,7 +46,7 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className={styles.testimoniales}>
+    <section id="videos" className={styles.testimoniales}>
       <h2>Experiencias en video</h2>
       <div className={styles.video_container}>
         {videoTestimonials.map((test) => {
@@ -61,7 +61,7 @@ export const Testimonials = () => {
           );
         })}
       </div>
-      <h2>Testimonios de nuestros clientes</h2>
+      <h2 id="testimoniales">Testimonios de nuestros clientes</h2>
       <div className={styles.testimoniales_container}>
         {testimonials.map((test) => {
           const { title, testimonial, name, img } = test;

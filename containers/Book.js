@@ -3,7 +3,7 @@ import styles from "../styles/containers/book.module.css";
 
 export const Book = () => {
   return (
-    <section id="about" className={styles.about}>
+    <section id="libro" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.about__container}>
           <h3>Mi libro</h3>

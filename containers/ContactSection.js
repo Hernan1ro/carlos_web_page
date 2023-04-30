@@ -120,12 +120,6 @@ export const ContactSection = () => {
             src="/home/send_icon.svg"
           />
         </button>
-        {/* <div data-aos="fade-up" className={styles.policies}>
-          <input type="checkbox" required />
-          <span>
-            He leído y acepto las <em>Políticas de privacidad</em>
-          </span>
-        </div> */}
         {error !== "" ? (
           <span className={styles.error}>
             Por favor, revisa los campos y vuelve a intentarlo

@@ -18,7 +18,7 @@ export const HeroServices = () => {
 
   const { h1, btn } = heroText[locale];
   return (
-    <section className={styles.servicios}>
+    <section id="hero" className={styles.servicios}>
       <div className={styles.hero_text}>
         <h1>{h1}</h1>
         <div className={styles.btn_container}>

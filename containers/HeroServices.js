@@ -30,15 +30,16 @@ export const HeroServices = () => {
   return (
     <section data-aos="fade-up" id="hero" className={styles.servicios}>
       <div className={styles.hero_text}>
-        <h1>{h1}</h1>
-        <div className={styles.btn_container}>
+        <h1 data-aos="fade-up">{h1}</h1>
+        <div data-aos="fade-up" className={styles.btn_container}>
           <Link href="/contacto">
             <button>{btn}</button>
           </Link>
-          <img src="/assets/icons/goal.svg" alt="" />
+          <img data-aos="fade-left" src="/assets/icons/goal.svg" alt="" />
         </div>
       </div>
       <img
+        data-aos="fade-left"
         className={styles.carlos_name}
         src="/carlos_name.svg"
         alt="carlos name"

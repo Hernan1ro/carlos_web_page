@@ -1,21 +1,47 @@
 import { useState } from "react";
 import styles from "../styles/containers/footer.module.css";
 import { useRouter } from "next/router";
+import { Testimonials } from "../containers/Testimonials";
 
 export const Footer = ({ report }) => {
   const [view, setView] = useState(false);
   const { locale } = useRouter();
-
-  const Text = {
+  const localFlag = {
     "en-US": {
-      text: "All rights reserved",
+      url: "/assets/icons/en.jpg",
+      home: "Home",
+      about: "About",
+      courses: "Courses",
+      values: "Values",
+      book: "Book",
+      reflections: "Reflections",
+      contact: "Contact",
+      videos: "Videos",
     },
     "es-ES": {
-      text: "Todos los derechos reservados.",
+      url: "/assets/icons/es.jpg",
+      home: "Inicio",
+      about: "Perfil",
+      courses: "Cursos",
+      values: "Valores",
+      book: "Libro",
+      reflections: "Reflexiones",
+      contact: "Contacto",
+      videos: "Videos",
     },
   };
 
-  const { text } = Text[locale];
+  const {
+    url,
+    home,
+    book,
+    contact,
+    videos,
+    courses,
+    about,
+    values,
+    reflections,
+  } = localFlag[locale];
 
   const classReport = {
     report: styles.report,
@@ -27,28 +53,25 @@ export const Footer = ({ report }) => {
         <div className={styles.box2}>
           <ul>
             <li>
-              <a href="#hero">Inicio</a>
+              <a href="#hero">{home}</a>
             </li>
             <li>
-              <a href="#about">Acerca</a>
+              <a href="#about">{about}</a>
             </li>
             <li>
-              <a href="#cursos">Cursos</a>
+              <a href="#cursos">{courses}</a>
             </li>
             <li>
-              <a href="#valores">Valores</a>
+              <a href="#valores">{values}</a>
             </li>
             <li>
-              <a href="#libro">Mi libro</a>
+              <a href="#libro">{book}</a>
             </li>
             <li>
-              <a href="#reflexiones">Reflexiones</a>
+              <a href="#reflexiones">{reflections}</a>
             </li>
             <li>
-              <a href="#videos">Videos</a>
-            </li>
-            <li>
-              <a href="#testimoniales">Testimoniales</a>
+              <a href="#videos">{videos}</a>
             </li>
           </ul>
           <img src="/assets/brandlogo/logo.png" alt="Carlos Fuentes" />

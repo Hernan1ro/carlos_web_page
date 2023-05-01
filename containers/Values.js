@@ -4,45 +4,18 @@ import { useRouter } from "next/router";
 export const Values = () => {
   const { locale } = useRouter();
 
-  const valueText = {
+  const textContent = {
     "en-US": {
-      h2: "My courses",
-      btn: "Get more",
-      p: "",
-      solutions: [
-        {
-          name: "Project Management",
-          image: "curso_1",
-          p: "We are a team prepared to support you in your needs in the management of your projects.",
-        },
-        {
-          name: "Service and customer experience",
-          image: "curso_2",
-          p: "We provide a qualitative and quantitative methodology to enhance your service experience model",
-        },
-      ],
+      h4: "My values and vision",
+      p: "After working for more than 20 years in multinational and national companies in different sectors, I left everything to go for my dream. In this process I have made a 180 degree turn to my life, to my purpose. One day I made the decision to search for my essence and to potentiate my specialty",
     },
     "es-ES": {
-      h2: "Mis cursos",
-      btn: "Obtener más información",
-      solutions: [
-        {
-          name: "Escuela Sabana de retazos",
-          image: "curso_1",
-          p: "Busca ayudar a potencializar tu desarrollo como persona y la construcción de tu branding personal",
-          p2: " Aprenderás a construir una imagen sólida y coherente de ti mismo, tanto en línea como en la vida real. Con un enfoque basado en resultados y en la aplicación práctica, te mostraremos cómo presentarte de manera impactante y efectiva, y cómo desarrollar una presencia poderosa que te diferencie de la multitud.",
-        },
-        {
-          name: "Escuela de servicio",
-          image: "curso_2",
-          p: "El servicio como la herramienta poderosa parta transformar realidades",
-          p2: "Aprenderás cómo puedes ayudar a los demás mientras mejoras tu propia vida, y cómo el servicio puede ser la herramienta más valiosa que tengas en tu arsenal. Con un enfoque basado en la empatía y la compasión, aprenderás cómo puedes hacer una diferencia real en la vida de los demás y en la tuya.",
-        },
-      ],
+      h4: "Soy docente y Coach desde hace más de 10 años, además de consultor y capacitador. Elegí el camino de ser escritor y en el proceso he descubierto el poder de servir: De dar para recibir",
+      p: "Después de trabajar por más de 20 años en multinacionales y empresas nacianales de diferentes sectores lo deje todo para ir por mi sueño. En este proceso he dado un giro de 180 grados a mi vida, a mi propósito. Un día tomé la decisión de buscar mi esencia y potencializar mi especialidad",
     },
   };
 
-  const { solutions, h2, btn } = valueText[locale];
+  const { h4, p } = textContent[locale];
 
   return (
     <section id="valores" className={styles.facts_section}>
@@ -50,14 +23,8 @@ export const Values = () => {
         <div className={styles.grid}>
           <img src="/carlos_values.png" alt="Carlos fuentes" />
           <div className={styles.text_container}>
-            <h4>Mis valores y visión</h4>
-            <p className={styles.description}>
-              Aprenderás cómo puedes ayudar a los demás mientras mejoras tu
-              propia vida, y cómo el servicio puede ser la herramienta más
-              valiosa que tengas en tu arsenal. Con un enfoque basado en la
-              empatía y la compasión, aprenderás cómo puedes hacer una
-              diferencia real en la vida de los demás y en la tuya.
-            </p>
+            <h4>{h4}</h4>
+            <p className={styles.description}>{p}</p>
           </div>
         </div>
       </div>

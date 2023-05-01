@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import styles from "../styles/containers/services.module.css";
 import Link from "next/link";
 
-export const Service = ({ name, img, p, btn }) => {
+export const Service = ({ name, img, p, p2, btn }) => {
   const element = useRef(null);
   const [view, setView] = useState(false);
 

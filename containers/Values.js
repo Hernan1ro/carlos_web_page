@@ -1,5 +1,8 @@
 import styles from "../styles/containers/values.module.css";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Values = () => {
   const { locale } = useRouter();
@@ -17,14 +20,26 @@ export const Values = () => {
 
   const { h4, p } = textContent[locale];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
+
   return (
     <section id="valores" className={styles.facts_section}>
       <div className={styles.facts_container}>
         <div className={styles.grid}>
-          <img src="/carlos_values.png" alt="Carlos fuentes" />
+          <img
+            data-aos="fade-up"
+            src="/carlos_values.png"
+            alt="Carlos fuentes"
+          />
           <div className={styles.text_container}>
-            <h4>{h4}</h4>
-            <p className={styles.description}>{p}</p>
+            <h4 data-aos="fade-up">{h4}</h4>
+            <p data-aos="fade-up" className={styles.description}>
+              {p}
+            </p>
           </div>
         </div>
       </div>

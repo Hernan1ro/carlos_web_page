@@ -1,6 +1,9 @@
+import { useEffect } from "react";
 import styles from "../styles/pages/servicios.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const HeroServices = () => {
   const { locale } = useRouter();
@@ -17,8 +20,15 @@ export const HeroServices = () => {
   };
 
   const { h1, btn } = heroText[locale];
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
+
   return (
-    <section id="hero" className={styles.servicios}>
+    <section data-aos="fade-up" id="hero" className={styles.servicios}>
       <div className={styles.hero_text}>
         <h1>{h1}</h1>
         <div className={styles.btn_container}>

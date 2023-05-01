@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/containers/quotes.module.css";
 import { useRouter } from "next/router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Quotes = () => {
   const [index, setIndex] = useState(0);
@@ -129,20 +131,29 @@ export const Quotes = () => {
     setIndex((index + 1) % quotes.length);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
+
   return (
     <section id="reflexiones" className={styles.facts_section}>
       <div className={styles.facts_container}>
         <div className={styles.grid}>
           <div className={styles.text_container}>
-            <h4>{quotes[index].word}</h4>
+            <h4 data-aos="fade-up">{quotes[index].word}</h4>
             <img
+              data-aos="fade-up"
               className={styles.author}
               src={`/${quotes[index].img}`}
               alt={quotes[index].author}
             />
-            <h5>{quotes[index].author}</h5>
-            <p className={styles.description}>{quotes[index].text}</p>
-            <div className={styles.dots}>
+            <h5 data-aos="fade-up">{quotes[index].author}</h5>
+            <p data-aos="fade-up" className={styles.description}>
+              {quotes[index].text}
+            </p>
+            <div data-aos="fade-up" className={styles.dots}>
               {quotes.map((_, i) => (
                 <div
                   onClick={handleNext}
@@ -161,6 +172,7 @@ export const Quotes = () => {
             </div>
           </div>
           <img
+            data-aos="fade-up"
             className={styles.carlos_img}
             src="/carlos_quotes.png"
             alt="Carlos fuents"

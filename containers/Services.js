@@ -1,6 +1,9 @@
 import styles from "../styles/containers/services.module.css";
 import { Service } from "../Components/Service";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Services = () => {
   const { locale } = useRouter();
@@ -48,18 +51,24 @@ export const Services = () => {
 
   const { solutions, h2, btn, p } = solutionsText[locale];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
+
   return (
     <section id="cursos" className={styles.facts_section}>
       <div className={styles.facts_container}>
-        <h2>{h2}</h2>
-        <p>{p}</p>
-        <div className={styles.grid}>
+        <h2 data-aos="fade-up">{h2}</h2>
+        <p data-aos="fade-up">{p}</p>
+        <div data-aos="fade-up" className={styles.grid}>
           {solutions.map((solution) => {
             const { name, image, p } = solution;
             return <Service name={name} img={image} p={p} btn={btn} />;
           })}
         </div>
-        <div className={styles.grid}>
+        <div data-aos="fade-up" className={styles.grid}>
           {solutions.map((solution) => {
             const { p2 } = solution;
             return <p className={styles.description}>{p2}</p>;

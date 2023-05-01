@@ -3,6 +3,9 @@ import { Testimonial } from "../Components/Testimonial";
 import { VideoTestimonial } from "../Components/VideoTestimonial";
 import { VideoPlayer } from "../Components/VideoPlayer";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Testimonials = () => {
   const { locale } = useRouter();
@@ -99,10 +102,16 @@ export const Testimonials = () => {
   };
   const { testimonials, videoTestimonials, h2, h2b } = valueText[locale];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
+
   return (
     <section id="videos" className={styles.testimoniales}>
-      <h2>{h2}</h2>
-      <div className={styles.video_container}>
+      <h2 data-aos="fade-up">{h2}</h2>
+      <div data-aos="fade-up" className={styles.video_container}>
         {videoTestimonials.map((test) => {
           const { title, testimonial, name, url } = test;
           return (
@@ -115,8 +124,10 @@ export const Testimonials = () => {
           );
         })}
       </div>
-      <h2 id="testimoniales">{h2b}</h2>
-      <div className={styles.testimoniales_container}>
+      <h2 data-aos="fade-up" id="testimoniales">
+        {h2b}
+      </h2>
+      <div data-aos="fade-up" className={styles.testimoniales_container}>
         {testimonials.map((test) => {
           const { title, testimonial, name, img } = test;
           return (

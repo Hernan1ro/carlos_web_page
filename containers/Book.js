@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
 import styles from "../styles/containers/book.module.css";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Book = () => {
   const { locale } = useRouter();
@@ -94,14 +96,21 @@ export const Book = () => {
     description: { p1, p2, p3, p4, p5, p6 },
   } = textContent[locale];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
+
   return (
     <section id="libro" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.about__container}>
-          <h3>{h3}</h3>
+          <h3 data-aos="fade-up">{h3}</h3>
           <div className={styles.about__container_image}>
             <div className={styles.about__photo_container}>
               <img
+                data-aos="fade-up"
                 className={styles.about__photo}
                 src="/book_sinapsis.png"
                 alt="Sabana de retazos"
@@ -113,8 +122,9 @@ export const Book = () => {
               className={styles.about__book_award}
               src="/book_award.png"
               alt="Sábana de retazos"
+              data-aos="fade-up"
             />
-            <div className={styles.about__description}>
+            <div data-aos="fade-up" className={styles.about__description}>
               <p>{p1}</p>
               <p>{p2}</p>
               {p3}

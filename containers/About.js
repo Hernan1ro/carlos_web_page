@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
 import styles from "../styles/containers/about.module.css";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const About = () => {
   const { locale } = useRouter();
@@ -19,6 +21,13 @@ export const About = () => {
   };
 
   const { about, p } = textContent[locale];
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
+
   return (
     <section id="about" className={styles.about}>
       <div className={styles.container}>
@@ -26,11 +35,15 @@ export const About = () => {
           <div className={styles.about__container_image}>
             <div className={styles.about__photo_container}>
               <img
+                data-aos="fade-up"
                 className={styles.about__photo}
                 src="/carlos_about.png"
                 alt="Hernán Mercado"
               />
-              <div className={styles.social_media__container}>
+              <div
+                data-aos="fade-up"
+                className={styles.social_media__container}
+              >
                 <a target="_blank" href="https://twitter.com/Hernan1ro">
                   <img
                     src="/icons/twitter.svg"
@@ -68,11 +81,11 @@ export const About = () => {
               </div>
             </div>
           </div>
-          <div className={styles.about__people}>
-            <h3>+15.000</h3>
-            <p>{p}</p>
+          <div data-aos="fade-up" className={styles.about__people}>
+            <h3 data-aos="fade-up">+15.000</h3>
+            <p data-aos="fade-up">{p}</p>
           </div>
-          <div className={styles.description_container}>
+          <div data-aos="fade-up" className={styles.description_container}>
             <p className={styles.about__description}>{about}</p>
           </div>
         </div>

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import styles from "../styles/containers/footer.module.css";
 import { useRouter } from "next/router";
-import { Testimonials } from "../containers/Testimonials";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Footer = ({ report }) => {
   const [view, setView] = useState(false);
@@ -46,6 +48,12 @@ export const Footer = ({ report }) => {
   const classReport = {
     report: styles.report,
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
 
   return (
     <footer className={styles.footer}>

@@ -10,7 +10,7 @@ export const Values = () => {
       p: "After working for more than 20 years in multinational and national companies in different sectors, I left everything to go for my dream. In this process I have made a 180 degree turn to my life, to my purpose. One day I made the decision to search for my essence and to potentiate my specialty",
     },
     "es-ES": {
-      h4: "Soy docente y Coach desde hace más de 10 años, además de consultor y capacitador. Elegí el camino de ser escritor y en el proceso he descubierto el poder de servir: De dar para recibir",
+      h4: "Mis valores y visión",
       p: "Después de trabajar por más de 20 años en multinacionales y empresas nacianales de diferentes sectores lo deje todo para ir por mi sueño. En este proceso he dado un giro de 180 grados a mi vida, a mi propósito. Un día tomé la decisión de buscar mi esencia y potencializar mi especialidad",
     },
   };

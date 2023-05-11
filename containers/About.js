@@ -44,23 +44,23 @@ export const About = () => {
                 data-aos="fade-up"
                 className={styles.social_media__container}
               >
-                <a target="_blank" href="https://twitter.com/Hernan1ro">
+                {/* <a target="_blank" href="https://twitter.com/Hernan1ro">
                   <img
                     src="/icons/twitter.svg"
                     name="twitter"
                     className={styles.social_img}
                   />
-                </a>
-                <a target="_blank" href="https://github.com/Hernan1ro">
+                </a> */}
+                {/* <a target="_blank" href="https://github.com/Hernan1ro">
                   <img
                     src="/icons/facebook.svg"
                     name="facebook"
                     className={styles.social_img}
                   />
-                </a>
+                </a> */}
                 <a
                   target="_blank"
-                  href="https://www.linkedin.com/in/hernan1ro/"
+                  href="https://www.instagram.com/cfuentes.co/"
                 >
                   <img
                     src="/icons/instagram.svg"
@@ -70,7 +70,7 @@ export const About = () => {
                 </a>
                 <a
                   target="_blank"
-                  href="https://www.linkedin.com/in/hernan1ro/"
+                  href="https://www.linkedin.com/in/carlos-alberto-fuentes-montes-2a3b6023/"
                 >
                   <img
                     src="/icons/linkedin.svg"

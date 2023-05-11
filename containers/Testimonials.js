@@ -124,7 +124,7 @@ export const Testimonials = () => {
           );
         })}
       </div>
-      <h2 data-aos="fade-up" id="testimoniales">
+      {/* <h2 data-aos="fade-up" id="testimoniales">
         {h2b}
       </h2>
       <div data-aos="fade-up" className={styles.testimoniales_container}>
@@ -139,7 +139,7 @@ export const Testimonials = () => {
             />
           );
         })}
-      </div>
+      </div> */}
     </section>
   );
 };

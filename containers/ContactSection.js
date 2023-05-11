@@ -144,12 +144,7 @@ export const ContactSection = () => {
         ></textarea>
         <button type="submit">
           <span>{btn}</span>
-          <Image
-            alt="enviar"
-            width={23}
-            height={23}
-            src="/home/send_icon.svg"
-          />
+          <Image alt="enviar" width={23} height={23} src="/send_icon.svg" />
         </button>
         {error !== "" ? (
           <span className={styles.error}>{error_text}</span>
